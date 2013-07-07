@@ -15,8 +15,18 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/Colour-Sampler-Pack'
 Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/Align'
+Bundle 'vim-scripts/EasyMotion'
 Bundle 'vim-scripts/asciidoc.vim'
 Bundle 'vim-scripts/argtextobj.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'altercation/vim-colors-solarized'
+
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\v(\.git)|(build.*)|(t2-output)$',
+\ 'file': '\v\.(o|d|exe|dll|a|zip|tar\..*)$',
+\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+\}
 
 let mapleader = ","
 
@@ -158,9 +168,9 @@ function! s:on_csharp_file()
 	compiler mcs
 endfunction
 
-autocmd filetype css,javascript,html,perl,ocaml,lisp,c,cpp,h,text,ruby,sh,lua set ts=2 sw=2 expandtab
+autocmd filetype vim,css,javascript,html,perl,ocaml,lisp,c,cpp,h,text,ruby,sh,lua set ts=2 sw=2 expandtab
 autocmd filetype python set ts=4 sw=4 expandtab
 autocmd filetype make set sw=2 ts=2 noexpandtab
 autocmd filetype cs call s:on_csharp_file()
-autocmd filetype vim,go set sw=4 ts=4 noexpandtab
+autocmd filetype go set sw=4 ts=4 noexpandtab
 autocmd filetype asm set sw=8 ts=8 noexpandtab
