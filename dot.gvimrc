@@ -23,9 +23,11 @@ set guioptions=aciFm
 "highlight Keyword			gui=none	guifg=#8a7520
 "highlight Type				gui=none	guifg=#481858
 
-set background=dark
+"set background=dark
+"colorscheme vividchalk
+set background=light
 let g:solarized_italic=0
-colorscheme vividchalk
+colorscheme solarized
 
 " Try to select a resonable font depending on the vim we're starting
 if has("mac")
@@ -36,8 +38,10 @@ if has("mac")
 
 		"set guifont=Menlo:h14
 		"set antialias
-		set guifont=Terminus:h16
-		set noantialias
+		"set guifont=Terminus:h16
+		"set noantialias
+		"set guifont=Monaco\ for\ Powerline:h13
+		set guifont=PragmataPro\ for\ Powerline:h15
 	else
 		"set guifont=PragmataPro:h15
 		set guifont=Andale\ Mono:h15

@@ -21,6 +21,9 @@ Bundle 'vim-scripts/argtextobj.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/powerline'
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v(\.git)|(build.*)|(t2-output)$',
