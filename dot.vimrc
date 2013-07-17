@@ -177,3 +177,8 @@ autocmd filetype make set sw=2 ts=2 noexpandtab
 autocmd filetype cs call s:on_csharp_file()
 autocmd filetype go set sw=4 ts=4 noexpandtab
 autocmd filetype asm set sw=8 ts=8 noexpandtab
+
+" Ghetto P4 integration. All I need is p4 edit. Everything else just slows me down.
+command! -nargs=0 PerforceEdit :call system("p4 edit " . expand("%:p"))
+nmap <C-F8> :PerforceEdit<CR>
+
