@@ -21,9 +21,11 @@ Bundle 'vim-scripts/argtextobj.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/powerline'
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+if has("mac") || has("unix")
+  Bundle 'Lokaltog/powerline'
+  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+end
 
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v(\.git)|(build.*)|(t2-output)$',
@@ -163,8 +165,6 @@ nmap <F9> :cprev<CR>
 
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
-
-nmap <F10> :call SlimvOpenReplBuffer()<CR>
 
 function! s:on_csharp_file()
 	set sw=2 ts=2 expandtab
