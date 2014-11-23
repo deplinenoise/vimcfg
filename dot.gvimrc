@@ -25,26 +25,37 @@ set guioptions=aciFm
 
 "set background=dark
 "colorscheme vividchalk
-set background=light
-let g:solarized_italic=0
-colorscheme solarized
+"set background=dark
+"let g:solarized_italic=0
+"colorscheme solarized
+
+"set background=light
+"colorscheme dawn
+set background=dark
+colorscheme dusk
 
 " Try to select a resonable font depending on the vim we're starting
 if has("mac")
 
 	let h = hostname()
 
-	if h == "dino.local"
+	if 1
 
 		"set guifont=Menlo:h14
 		"set antialias
 		"set guifont=Terminus:h16
 		"set noantialias
 		"set guifont=Monaco\ for\ Powerline:h13
+		"set guifont=PragmataPro\ for\ Powerline:h16
+		"set linespace=1
+		"set guifont=PragmataPro\ for\ Powerline:h15
+		"set guifont=Alto\ Mono:h8
+		"set linespace=2
+    "set noantialias
 		set guifont=PragmataPro\ for\ Powerline:h15
 	else
 		"set guifont=PragmataPro:h15
-		set guifont=Andale\ Mono:h15
+		"set guifont=Andale\ Mono:h15
 
 		"set noantialias
 

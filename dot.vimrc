@@ -7,6 +7,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" When using a powerline font only
+"let g:airline_powerline_fonts=1
+
 " let Vundle manage Vundle - required! 
 Bundle 'gmarik/vundle'
 
@@ -21,6 +24,8 @@ Bundle 'vim-scripts/argtextobj.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'leafgarland/typescript-vim'
 
 if has("mac") || has("unix")
   Bundle 'Lokaltog/powerline'
@@ -43,11 +48,11 @@ set ch=2
 set encoding=utf-8
 set hidden
 set modeline
-set noexpandtab
+set expandtab
 set number
 set ruler
-set sw=4
-set ts=4
+set sw=2
+set ts=2
 set scrolloff=3
 set shellslash
 set autoread
@@ -73,6 +78,8 @@ let g:slimv_ctags = "ctags"
 let g:slimv_impl = "sbcl"
 let g:paredit_mode = 0
 let g:slimv_repl_split = 2
+
+set lispwords+=,syntax-rules,let-keywords,define-public,display*
 
 "set list
 "set listchars=tab:>-,trail:@
