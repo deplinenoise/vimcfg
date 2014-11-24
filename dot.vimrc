@@ -27,11 +27,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'leafgarland/typescript-vim'
 
-if has("mac") || has("unix")
-  Bundle 'Lokaltog/powerline'
-  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-end
-
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v(\.git)|(build.*)|(t2-output)$',
 \ 'file': '\v\.(o|d|exe|dll|a|zip|tar\..*)$',
