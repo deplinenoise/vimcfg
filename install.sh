@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 for f in ~/.vimrc ~/.gvimrc ~/.vim; do
 	test -e $f && (mv -f $f $f.bak && echo "backed up $f to $f")
